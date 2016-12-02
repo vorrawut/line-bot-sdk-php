@@ -16,34 +16,16 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\Event\MessageEvent;
+use LINE\LINEBot\EchoBot\Dependency;
+use LINE\LINEBot\EchoBot\Route;
+use LINE\LINEBot\EchoBot\Setting;
 
-use LINE\LINEBot\Event\MessageEvent;
+require '../vendor/autoload.php';
 
-/**
- * A class that represents the message event of text.
- *
- * @package LINE\LINEBot\Event\MessageEvent
- */
-class TextMessage extends MessageEvent
-{
-    /**
-     * TextMessage constructor.
-     *
-     * @param array $event
-     */
-    public function __construct($event)
-    {
-        parent::__construct($event);
-    }
+$setting = Setting::getSetting();
+$app = new Slim\App($setting);
 
-    /**
-     * Returns text of the message.
-     *
-     * @return string
-     */
-    public function getText()
-    {
-        return $this->message['text'];
-    }
-}
+(new Dependency())->register($app);
+(new Route())->register($app);
+
+$app->run();
