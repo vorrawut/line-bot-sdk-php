@@ -60,8 +60,7 @@ class Route
             $bot = $this->bot;
             /** @var \Monolog\Logger $logger */
             $logger = $this->logger;
-            $logger->info('###################### Route register #####################');
-            error_log("hello, this is a test!2");
+            error_log("callback function!");
             $signature = $req->getHeader(HTTPHeader::LINE_SIGNATURE);
             if (empty($signature)) {
                 $logger->info('Signature is missing');
@@ -80,11 +79,12 @@ class Route
             } catch (InvalidEventRequestException $e) {
                 return $res->withStatus(400, "Invalid event request");
             }
+            error_log($events);
 
             foreach ($events as $event) {
                 /** @var EventHandler $handler */
                 $handler = null;
-
+                error_log($event);
                 if ($event instanceof MessageEvent) {
                     if ($event instanceof TextMessage) {
                         $handler = new TextMessageHandler($bot, $logger, $req, $event);
