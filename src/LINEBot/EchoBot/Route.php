@@ -54,12 +54,14 @@ class Route
 {
     public function register(\Slim\App $app)
     {
+        error_log("hello, this is a test!");
         $app->post('/callback', function (\Slim\Http\Request $req, \Slim\Http\Response $res) {
             /** @var LINEBot $bot */
             $bot = $this->bot;
             /** @var \Monolog\Logger $logger */
             $logger = $this->logger;
             $logger->info('###################### Route register #####################');
+            error_log("hello, this is a test!2");
             $signature = $req->getHeader(HTTPHeader::LINE_SIGNATURE);
             if (empty($signature)) {
                 $logger->info('Signature is missing');
