@@ -16,7 +16,7 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\KitchenSink;
+namespace LINE\LINEBot\EchoBot;
 
 use LINE\LINEBot;
 use LINE\LINEBot\Constant\HTTPHeader;
@@ -37,18 +37,18 @@ use LINE\LINEBot\Exception\InvalidEventRequestException;
 use LINE\LINEBot\Exception\InvalidSignatureException;
 use LINE\LINEBot\Exception\UnknownEventTypeException;
 use LINE\LINEBot\Exception\UnknownMessageTypeException;
-use LINE\LINEBot\KitchenSink\EventHandler\BeaconEventHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\FollowEventHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\JoinEventHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\LeaveEventHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\MessageHandler\AudioMessageHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\MessageHandler\ImageMessageHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\MessageHandler\LocationMessageHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\MessageHandler\StickerMessageHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\MessageHandler\TextMessageHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\MessageHandler\VideoMessageHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\PostbackEventHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\UnfollowEventHandler;
+use LINE\LINEBot\EchoBot\EventHandler\BeaconEventHandler;
+use LINE\LINEBot\EchoBot\EventHandler\FollowEventHandler;
+use LINE\LINEBot\EchoBot\EventHandler\JoinEventHandler;
+use LINE\LINEBot\EchoBot\EventHandler\LeaveEventHandler;
+use LINE\LINEBot\EchoBot\EventHandler\MessageHandler\AudioMessageHandler;
+use LINE\LINEBot\EchoBot\EventHandler\MessageHandler\ImageMessageHandler;
+use LINE\LINEBot\EchoBot\EventHandler\MessageHandler\LocationMessageHandler;
+use LINE\LINEBot\EchoBot\EventHandler\MessageHandler\StickerMessageHandler;
+use LINE\LINEBot\EchoBot\EventHandler\MessageHandler\TextMessageHandler;
+use LINE\LINEBot\EchoBot\EventHandler\MessageHandler\VideoMessageHandler;
+use LINE\LINEBot\EchoBot\EventHandler\PostbackEventHandler;
+use LINE\LINEBot\EchoBot\EventHandler\UnfollowEventHandler;
 
 class Route
 {
