@@ -170,7 +170,8 @@ class TextMessageHandler implements EventHandler
     private function echoBack($replyToken, $text)
     {
         $this->logger->info("Returns echo message $replyToken: $text");
-        $this->bot->replyText($replyToken, $text);
+        //$this->bot->replyText($replyToken, $text);
+        $this->bot->replyText($replyToken, "Bot can't use profile API without user ID");
     }
 
     private function sendProfile($replyToken, $userId)
