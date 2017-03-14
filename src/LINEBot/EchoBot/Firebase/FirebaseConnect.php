@@ -30,19 +30,29 @@ class FirebaseConnect{
 
 		$firebase = new \Firebase\FirebaseLib(DEFAULT_URL, DEFAULT_TOKEN);
 
+		// --- Set Firebase time out ---
+		$firebase->setTimeOut(30);
+
 		// --- storing an array ---
 		$test = array(
 		    "foo" => "bar",
 		    "i_love" => "lamp",
 		    "id" => 42
 		);
-		$dateTime = new DateTime();
-		$firebase->set(DEFAULT_PATH . '/' . $dateTime->format('c'), $test);
 
-		// --- storing a string ---
-		$firebase->set(DEFAULT_PATH . '/name/contact001', "John Doe");
+		setFirebaseValue(DEFAULT_PATH, $test, $firebase);
 
-		// --- reading the stored string ---
-		$name = $firebase->get(DEFAULT_PATH . '/name/contact001');
+		// $dateTime = new DateTime();
+		// $firebase->set(DEFAULT_PATH . '/' . $dateTime->format('c'), $test);
+
+		// // --- storing a string ---
+		// $firebase->set(DEFAULT_PATH . '/name/contact001', "John Doe");
+
+		// // --- reading the stored string ---
+		// $name = $firebase->get(DEFAULT_PATH . '/name/contact001');
+	}
+
+	public function setFirebaseValue($path, $value, $firebase) {
+  		$firebase->set($path, $value);
 	}
 }
