@@ -16,7 +16,7 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\KitchenSink;
+namespace LINE\LINEBot\EchoBot;
 
 interface EventHandler
 {
