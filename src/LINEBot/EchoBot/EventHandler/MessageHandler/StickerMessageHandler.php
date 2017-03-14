@@ -16,11 +16,11 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\KitchenSink\EventHandler\MessageHandler;
+namespace LINE\LINEBot\EchoBot\EventHandler\MessageHandler;
 
 use LINE\LINEBot;
 use LINE\LINEBot\Event\MessageEvent\StickerMessage;
-use LINE\LINEBot\KitchenSink\EventHandler;
+use LINE\LINEBot\EchoBot\EventHandler;
 use LINE\LINEBot\MessageBuilder\StickerMessageBuilder;
 
 class StickerMessageHandler implements EventHandler

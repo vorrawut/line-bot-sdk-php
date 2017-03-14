@@ -16,11 +16,11 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\KitchenSink\EventHandler\MessageHandler;
+namespace LINE\LINEBot\EchoBot\EventHandler\MessageHandler;
 
 use LINE\LINEBot;
 use LINE\LINEBot\Event\MessageEvent\LocationMessage;
-use LINE\LINEBot\KitchenSink\EventHandler;
+use LINE\LINEBot\EchoBot\EventHandler;
 use LINE\LINEBot\MessageBuilder\LocationMessageBuilder;
 
 class LocationMessageHandler implements EventHandler

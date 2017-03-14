@@ -16,11 +16,11 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\KitchenSink\EventHandler;
+namespace LINE\LINEBot\EchoBot\EventHandler;
 
 use LINE\LINEBot;
 use LINE\LINEBot\Event\LeaveEvent;
-use LINE\LINEBot\KitchenSink\EventHandler;
+use LINE\LINEBot\EchoBot\EventHandler;
 
 class LeaveEventHandler implements EventHandler
 {

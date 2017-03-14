@@ -16,7 +16,7 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\KitchenSink\EventHandler\MessageHandler\Util;
+namespace LINE\LINEBot\EchoBot\EventHandler\MessageHandler\Util;
 
 class UrlBuilder
 {

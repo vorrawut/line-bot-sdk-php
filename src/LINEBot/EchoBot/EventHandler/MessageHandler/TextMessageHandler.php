@@ -16,7 +16,7 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\KitchenSink\EventHandler\MessageHandler;
+namespace LINE\LINEBot\EchoBot\EventHandler\MessageHandler;
 
 use LINE\LINEBot;
 use LINE\LINEBot\ImagemapActionBuilder\AreaBuilder;
@@ -26,8 +26,8 @@ use LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder;
 use LINE\LINEBot\TemplateActionBuilder\PostbackTemplateActionBuilder;
 use LINE\LINEBot\TemplateActionBuilder\UriTemplateActionBuilder;
 use LINE\LINEBot\Event\MessageEvent\TextMessage;
-use LINE\LINEBot\KitchenSink\EventHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\MessageHandler\Util\UrlBuilder;
+use LINE\LINEBot\EchoBot\EventHandler;
+use LINE\LINEBot\EchoBot\EventHandler\MessageHandler\Util\UrlBuilder;
 use LINE\LINEBot\MessageBuilder\Imagemap\BaseSizeBuilder;
 use LINE\LINEBot\MessageBuilder\ImagemapMessageBuilder;
 use LINE\LINEBot\MessageBuilder\TemplateMessageBuilder;

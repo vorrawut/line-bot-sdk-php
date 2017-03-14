@@ -16,12 +16,12 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\KitchenSink\EventHandler\MessageHandler;
+namespace LINE\LINEBot\EchoBot\EventHandler\MessageHandler;
 
 use LINE\LINEBot;
 use LINE\LINEBot\Event\MessageEvent\VideoMessage;
-use LINE\LINEBot\KitchenSink\EventHandler;
-use LINE\LINEBot\KitchenSink\EventHandler\MessageHandler\Util\UrlBuilder;
+use LINE\LINEBot\EchoBot\EventHandler;
+use LINE\LINEBot\EchoBot\EventHandler\MessageHandler\Util\UrlBuilder;
 use LINE\LINEBot\MessageBuilder\VideoMessageBuilder;
 
 class VideoMessageHandler implements EventHandler
