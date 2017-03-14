@@ -65,7 +65,7 @@ class TextMessageHandler implements EventHandler
     public function handle()
     {
         $text = $this->textMessage->getText();
-        $logger ->addWarning("############ Text : ",$text);
+        error_log("TextMessageHandler handle",$text);
         $replyToken = $this->textMessage->getReplyToken();
         $this->logger->info("Got text message from $replyToken: $text");
 
@@ -158,6 +158,7 @@ class TextMessageHandler implements EventHandler
                 $this->bot->replyMessage($replyToken, $imagemapMessageBuilder);
                 break;
             default:
+                error_log("TextMessageHandler handle default is ",$text);
                 $this->echoBack($replyToken, $text);
                 break;
         }
