@@ -34,7 +34,7 @@ class FirebaseConnect{
         error_log("In FirebaseConnect connectToFirebase()!");
 
 		$firebase = new \Firebase\FirebaseLib(DEFAULT_URL, DEFAULT_TOKEN);
-
+		error_log($firebase);
 		// --- Set Firebase time out ---
 		$firebase->setTimeOut(30);
 
