@@ -20,7 +20,7 @@ namespace LINE\LINEBot\KitchenSink\EventHandler;
 
 use LINE\LINEBot;
 use LINE\LINEBot\Event\BeaconDetectionEvent;
-use LINE\LINEBot\KitchenSink\EventHandler;
+use LINE\LINEBot\EchoBot\EventHandler;
 
 class BeaconEventHandler implements EventHandler
 {
