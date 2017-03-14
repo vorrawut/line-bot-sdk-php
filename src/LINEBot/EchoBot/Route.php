@@ -49,6 +49,7 @@ use LINE\LINEBot\EchoBot\EventHandler\MessageHandler\TextMessageHandler;
 use LINE\LINEBot\EchoBot\EventHandler\MessageHandler\VideoMessageHandler;
 use LINE\LINEBot\EchoBot\EventHandler\PostbackEventHandler;
 use LINE\LINEBot\EchoBot\EventHandler\UnfollowEventHandler;
+use Line\LINEBot\EchoBot\Firebase\FirebaseConnect;
 
 class Route
 {
@@ -61,6 +62,7 @@ class Route
             /** @var \Monolog\Logger $logger */
             $logger = $this->logger;
             error_log("callback function!");
+            new FirebaseConnect();
             $signature = $req->getHeader(HTTPHeader::LINE_SIGNATURE);
             if (empty($signature)) {
                 $logger->info('Signature is missing');
