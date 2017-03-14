@@ -29,7 +29,7 @@ class FirebaseConnect{
 	const DEFAULT_PATH = '/firebase/example';
 	const DEFAULT_TODO_PATH = '/sample/todo';
 
-	public function connectToFirebase (){
+	public function connectToFirebase(){
 
         error_log("In FirebaseConnect connectToFirebase()!");
 
