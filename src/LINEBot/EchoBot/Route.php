@@ -62,7 +62,7 @@ class Route
             /** @var \Monolog\Logger $logger */
             $logger = $this->logger;
             error_log("callback function!");
-            new FirebaseConnect();
+            $firebaseStub = new FirebaseConnect();
             $signature = $req->getHeader(HTTPHeader::LINE_SIGNATURE);
             if (empty($signature)) {
                 $logger->info('Signature is missing');

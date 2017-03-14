@@ -19,14 +19,19 @@
 namespace LINE\LINEBot\EchoBot\Firebase;
 
 class FirebaseConnect{
+	 protected $_todoMilk = array(
+        'name' => 'Pick the milk',
+        'priority' => 1
+    );
 
 	const DEFAULT_URL = 'https://linebot-a854d.firebaseio.com/';
 	const DEFAULT_TOKEN = 'AIzaSyD6tM4Yf-40Wc3nk0v9hDVUN7jr9gIES3A';
 	const DEFAULT_PATH = '/firebase/example';
+	const DEFAULT_TODO_PATH = '/sample/todo';
 
 	public function connectToFirebase (){
 
-        error_log("In FirebaseConnect connectToFirebase() !");
+        error_log("In FirebaseConnect connectToFirebase()!");
 
 		$firebase = new \Firebase\FirebaseLib(DEFAULT_URL, DEFAULT_TOKEN);
 
@@ -40,7 +45,7 @@ class FirebaseConnect{
 		    "id" => 42
 		);
 
-		setFirebaseValue(DEFAULT_PATH, $test, $firebase);
+		setFirebaseValue(DEFAULT_TODO_PATH, $_todoMilk, $firebase);
 
 		// $dateTime = new DateTime();
 		// $firebase->set(DEFAULT_PATH . '/' . $dateTime->format('c'), $test);
